@@ -1,1 +1,0 @@
-# JhadeLambert.github.io
