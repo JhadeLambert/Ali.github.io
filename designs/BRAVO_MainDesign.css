@@ -1,14 +1,13 @@
 body { 
 	background-image: url("../media/images/background.jpg");
-	Font-family: Garamond, Helvetica;
+	font-family: Garamond, Helvetica;
 	color: #004c4c;	
 }
-	
+
 div {
 	background-color: #b2d8d8;
-	font-size: 40px;
-	padding: 10px;
-	margin:30px 100px 40px;
+	padding: 20px;
+	margin: 23px 180px 20px;
 	border-radius: 25px;
 }
 
@@ -18,25 +17,25 @@ ul, li {
 	padding-top: 10px;
 }
 
-hr {
-	width: 40em;	
-}
-
 h1, h2{
+	text-shadow: 8px 8px 12px darkgrey;
 	text-align: center;
 	font-weight: bold;
 } 
 
+.title {
+	padding: 50px 0px 20px;
+	font-size: 4rem;
+}
+
 .left, .left image {
 	text-align: left;
-	margin-right: 700px;
-	margin-left: 100px;
+	margin: 50px;
 }
 
 .right {
 	text-align: right;
-	margin-left: 700px;
-	margin-right: 100px;
+	margin: 50px;
 }
 
 a .left img {
@@ -55,7 +54,7 @@ p {
 a {
 	text-decoration: none;
 	color: #004c4c;
-	padding: 10px 10px;
+	padding: 10px;
 	font-size: 25px;
 }
 
