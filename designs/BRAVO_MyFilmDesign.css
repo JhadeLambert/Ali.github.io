@@ -69,6 +69,12 @@ h3 {
 	border-radius: 25px;
 }
 
+.shows a{
+	text-decoration: none;
+	color: #004c4c;
+	font-size: 25px;
+}
+
 .shows a:hover{
 	color: #000000;
 }
