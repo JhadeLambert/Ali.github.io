@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" >
+    <title>Sceneries</title>
+    <script type="text/javascript">
+    	function writeText(txt) {
+    		document.getElementById("desc").innerHTML=txt;
+    }
+    	function dissolveText(txt) {
+    	document.getElementById("desc").innerHTML=txt;
+    }
+    </script>
+    <style> 
+    	p#desc{
+    		text-align:center;
+			font-size: 24px;
+    	}
+    </style>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="../designs/BRAVO_MainDesign.css">
+	<div class="header">
+	<ul>
+		<li><a href="../BRAVO_FILMS/BRAVO_FILMS.html">Movies and TV Shows</a></li>
+		<li><a href="../BRAVO_MYBEATS/BRAVO_MYBEATS.html">Favorite Songs</a></li>
+		<li><a href="../BRAVO_RESUME/BRAVO_RESUME.html">Resume</a></li>
+		<li><a href="../BRAVO_SCENERIES/BRAVO_SCENERIES.html">Sceneries</a></li>
+		<li><a href="../BRAVO_PHOTOGALLERY/BRAVO_PHOTOGALLERY.html">Photo Gallery</a></li>
+		<li><a href="../BRAVO_ABOUTME/BRAVO_BIO.html">About</a></li>
+		<li><a href="../BRAVO_HomePage.html">Home</a></li>
+	</ul>
+	<br>	
+	<h1 class="title">Beautiful Sceneries</h1>
+	<hr>
+
+		<p><q>Life is Short and The World is Wide</q><br>
+		Simon Raven</p>
+	</div>
+
+	<div style="margin: 23px 60px 20px;">
+		<p>There are times I think the best to live is to travel and gain experiences in various places and learn different cultures.
+		There are sceneries I've seen in a picture from youtube or google yet curious to know what its like to acutally be there. 
+		Click the following pictures in the collage to know the information I want to share and to see the sceneries closely.</p>
+		<hr>
+		<h2>Reason to why I chose the specified sceneries that I hope to visit</h2>
+        <p id="desc"></p>
+		<img style="border: 2px ridge #006666;" 
+		class="center" src="../media/images/collage.png" height="412px" width="600px" 
+		alt="Collage of where i want to travel" title="Collage of where i want to travel" usemap="#collage">
+
+		<map name="collage">
+        <area shape="rect" coords="1,1,233,413" href="BRAVO_VENICE.html" onmouseover="writeText('My sister recommended me to go venice. She showed my some images and invited me to come with her someday since she was already planning to travel.');" onmouseout="dissolveText('');" />
+
+        <area shape="rect" coords="600,410,386,0" href="BRAVO_CHILE.html" onmouseover="writeText('I have seen the scenery on social media by some of my uncles to this place before I became interested and search and found some descriptions about it and just thought to go there someday.');" onmouseout="dissolveText('');" />
+
+        <area shape="circle" coords="307,200,76" href="BRAVO_HAVASU.html" onmouseover="writeText('The place is somewhat similar to our province we go too but was still curious to see the whole place and imagining what experience will it be to take a bath in such a place.');" onmouseout="dissolveText('');" />
+
+        <area shape="poly" coords="232,0,232,180,240,165,246,155,255,145,266,137,275,131,288,127,300,124,311,124,323,125,335,129,347,134,358,142,365,149,371,158,376,166,381,176,382,183,383,1" href="BRAVO_MATSUBARA.html" onmouseover="writeText('Japan in general I was very curious to visit. I want to learn about their culture, langguage if achievable and appreciate the sceneries and infrastructure of their country.');" onmouseout="dissolveText('');" />
+
+        <area shape="poly" coords="234,217,236,230,241,240,248,249,254,255,
+        						   262,263,271,268,279,272,290,275,303,277,
+        						   315,276,331,274,342,270,359,258,373,241,
+        						   378,228,383,210,382,411,231,411" 
+        						  	href="BRAVO_ELYUNQUE.html" 
+        						  	onmouseover="writeText('I found this place when where requested an assignment during highschool to reseach three rare species and present them to the class. I cannot remmember them clearly they were surely found only in that rainforest.');" 
+        						  	onmouseout="dissolveText('');" />
+         <br><br>
+         <hr>
+        </map>
+	</div>
+	
+</body>
+</html>
