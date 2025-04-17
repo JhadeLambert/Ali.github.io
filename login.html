@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Ali</title>
+
+    <script>
+      const objPeople = [
+        {
+          username: "akin lang ikaw",
+          password: "12/25/2024 08:05 PM"
+        }
+      ];
+  
+      function getInfo() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+  
+        for (let i = 0; i < objPeople.length; i++) {
+          if (
+            username === objPeople[i].username &&
+            password === objPeople[i].password
+          ) {
+            // Generate or retrieve device ID
+            let deviceId = localStorage.getItem("deviceId");
+            if (!deviceId) {
+              deviceId = "device-" + Math.random().toString(36).substring(2);
+              localStorage.setItem("deviceId", deviceId);
+            }
+  
+            // Store login state
+            localStorage.setItem("loggedIn", "true");
+            localStorage.setItem("authDevice", deviceId);
+  
+            openModal();
+            document
+              .getElementById("closeModalButton")
+              .addEventListener("click", function () {
+                window.location.href = "index.html";
+              });
+            return;
+          }
+        }
+        alert("Tip: lowercase cs, Date Format: 03/24/2001 12:30 AM");
+      }
+  
+      function openModal() {
+        document.getElementById("modalOverlay").classList.add("show");
+      }
+  
+      function closeModal() {
+        document.getElementById("modalOverlay").classList.remove("show");
+      }
+    </script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+      .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal {
+            background: rgba(245, 246, 231, 0.95);
+            box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.001px #ccc;
+            border-radius: 3%;
+            padding: 20px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .close-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #ccc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-overlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+      input {
+        caret-color: red;
+      }
+
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #ecf0f3;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        place-items: center;
+        overflow: hidden;
+        font-family: poppins;
+        width: 100%;
+        height: 100vh;
+        background-color: #f5f6e7;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("https://rawcdn.githack.com/Kerthin/musicPlayer-templateSait/4df6444e97123a39d036f1f9b57973858f70bae5/docs/image/bg/bg.png");
+      }
+
+      .container {
+        position: relative;
+        width: 350px;
+        height: 500px;
+        border-radius: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+        background: #f5f6e7;
+        box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.001px #ccc;
+        border-radius: 10%;
+      }
+
+      .bounceInBottom { animation-name: bounceInBottom }
+      @keyframes bounceInBottom {
+          0% { transform: translate3d(0, 300%, 0) }
+          58% { transform: translate3d(0, -27px, 0) }
+          73% { transform: translate3d(0, 12px, 0) }
+          88% { transform: translate3d(0, -8px, 0) }
+      }
+
+      .brand-logo {
+        height: 100px;
+        width: 100px;
+        background: url("email.png");
+        margin: auto;
+        border-radius: 10%;
+        box-sizing: border-box;
+        box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+      }
+
+      .brand-title {
+        margin-top: 10px;
+        font-weight: 900;
+        font-size: 1.8rem;
+        color: #424234;
+        letter-spacing: 1px;
+      }
+
+      .inputs {
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      label, input, button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      label {
+        margin-bottom: 4px;
+      }
+
+      label:nth-of-type(2) {
+        margin-top: 12px;
+      }
+
+      input::placeholder {
+        background: #f5f6e7;
+      }
+
+      input {
+        background: #f5f6e7;
+        padding: 10px;
+        padding-left: 20px;  
+        height: 50px;
+        font-size: 14px;
+        border-radius: 50px;
+        box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+      }
+
+      button {
+        color: #f5f6e7;
+        margin-top: 20px;
+        background: #749064;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 900;
+        box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+        transition: 0.5s;
+      }
+
+      button:hover {
+        box-shadow: none;
+      }
+
+      a {
+        position: absolute;
+        font-size: 8px;
+        bottom: 4px;
+        right: 4px;
+        text-decoration: none;
+        color: black;
+        background: yellow;
+        border-radius: 10px;
+        padding: 2px;
+      }
+
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+</head>
+<body>
+  <div class="container">
+    <div class="brand-logo"></div>
+    <div class="brand-title">Who youu?</div>
+    <div class="inputs">
+      <label>Username</label>
+      <input type="text" placeholder="Call Sign" id="username" />
+      <label>Date</label>
+      <input type="text" placeholder="MM/dd/yyyy hh:mm:ss tt" id="password"/>
+      <button type="button" onclick="getInfo()">OPEN</button>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <H5>Hello to my favorite Person </H5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat blanditiis dolor cum quisquam error aspernatur quae quam eligendi incidunt, eaque perferendis, eius fugit autem hic at porro consectetur earum quos! Praesentium est quos, beatae minima at eius eaque recusandae porro cupiditate ab non laboriosam. Modi vero iusto quasi quam optio?</p>
+        <button class="close-btn" onclick="closeModal()" id="closeModalButton">Contiue</button>
+    </div>
+</div>
+</body>
+</html>
